@@ -9,6 +9,10 @@ Built to be a credible interview artifact: every layer is swappable, the LLM cal
 sites are evaluated against a fixture-driven harness, and the whole thing runs
 end-to-end with no API key thanks to a deterministic mock backend.
 
+> **Live demo**: https://prospect-intel-agent.vercel.app (frontend) ·
+> https://prospect-intel-agent.fly.dev/docs (API)
+> · See [DEPLOY.md](DEPLOY.md) for the two-command deploy path.
+
 ## Features
 
 - **Two-step pipeline**: enrichment → signal extraction → outreach draft. The

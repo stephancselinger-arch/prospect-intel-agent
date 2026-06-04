@@ -1,0 +1,44 @@
+# fly.toml — backend (FastAPI) deploy config for Fly.io
+#
+# Quickstart:
+#   brew install flyctl              # or: curl -L https://fly.io/install.sh | sh
+#   flyctl auth login                # browser SSO
+#   flyctl launch --no-deploy --copy-config --name prospect-intel-agent --region yyz
+#   flyctl secrets set ANTHROPIC_API_KEY=sk-ant-...   # optional; mock backend works without
+#   flyctl deploy
+#
+# Then update Vercel's NEXT_PUBLIC_API_BASE to https://prospect-intel-agent.fly.dev
+
+app = "prospect-intel-agent"
+primary_region = "yyz"   # Toronto
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  LLM_BACKEND = "auto"
+  ANTHROPIC_MODEL = "claude-sonnet-4-6"
+
+[http_service]
+  internal_port = 8007
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0   # scale to zero when idle — fine for a demo
+  processes = ["app"]
+
+  [http_service.concurrency]
+    type = "requests"
+    soft_limit = 25
+    hard_limit = 50
+
+  [[http_service.checks]]
+    grace_period = "5s"
+    interval = "30s"
+    method = "GET"
+    timeout = "5s"
+    path = "/health"
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "256mb"
