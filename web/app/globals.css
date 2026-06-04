@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  background: #0a0a0a;
+  color: #ededed;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* citation chip used inline in outreach body */
+.cite {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 6px;
+  margin: 0 2px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  border-radius: 4px;
+  background: rgba(196, 242, 94, 0.14);
+  color: #c4f25e;
+  border: 1px solid rgba(196, 242, 94, 0.3);
+  cursor: pointer;
+  transition: background 0.1s ease;
+}
+.cite:hover {
+  background: rgba(196, 242, 94, 0.28);
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "domain": "acme.com",
+    "name": "Acme",
+    "expected_signal_types": ["hiring", "funding", "leadership_change"],
+    "must_cite_at_least": 2
+  },
+  {
+    "domain": "northwind.io",
+    "name": "Northwind",
+    "expected_signal_types": ["product_launch", "expansion"],
+    "must_cite_at_least": 1
+  },
+  {
+    "domain": "globex.com",
+    "name": "Globex",
+    "expected_signal_types": ["leadership_change"],
+    "must_cite_at_least": 1
+  }
+]
