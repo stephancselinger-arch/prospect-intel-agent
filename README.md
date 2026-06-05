@@ -164,3 +164,5 @@ est_cost_usd_per_prospect             0.0
 - **Testing**: pytest (22 tests covering models, LLM interface, enrichment, agent, routers)
 - **Eval**: custom harness with JSON + Markdown reports
 - **Deploy**: Dockerfile + docker-compose; backend works on any container host, web is Vercel-ready
+
+<!-- Last updated: 2026-06-05 -->
