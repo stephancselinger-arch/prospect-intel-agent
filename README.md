@@ -166,3 +166,5 @@ est_cost_usd_per_prospect             0.0
 - **Deploy**: Dockerfile + docker-compose; backend works on any container host, web is Vercel-ready
 
 <!-- Last updated: 2026-06-05 -->
+
+<!-- Last updated: 2026-06-07 -->
