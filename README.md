@@ -316,3 +316,5 @@ est_cost_usd_per_prospect             0.0
 <!-- Last updated: 2026-10-29 -->
 
 <!-- Last updated: 2026-10-31 -->
+
+<!-- Last updated: 2026-11-01 -->
